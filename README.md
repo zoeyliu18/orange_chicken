@@ -82,7 +82,7 @@ e.g., generating 3-CRF shell script
 
 ```python3 code/sirius.py --input experiments/mayo/500/ --lang mayo --r without```
 
-## Gather training results for a given language 
+## 6. Gather training results for a given language 
 
 Again take Yorem Nokki as an example. Make sure that given a data set size (e.g, 500) and a sampling method (e.g., with replacement), there are three subfolders in the folder ```experiments/mayo/500/with```: 
 
@@ -96,22 +96,31 @@ Then run:
 
 ```python3 code/gather.py --input experiments/mayo/ --lang mayo --short mayo.txt --full mayo_full.txt --long mayo_details.txt```
 
-## 6. Testing
+## 7. Testing
 
 ### Testing the best CRF
 
 e.g., 4-CRFs trained from data sets sampled with replacement, for test sets of size 50
 
-```python3 code/testing_crf.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --order 4 --r with --k 50```
+```python3 code/testing_crf.py --input experiments/zulu/500/ --data resources/ --lang zul --n 100 --order 4 --r with --k 50```
 
 ### Testing the best Seq2seq
 
 e.g., trained from data sets sampled with replacement, for test sets of size 50
 
-```python3 code/testing_seq2seq.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --r with --k 50```
+```python3 code/testing_seq2seq.py --input experiments/zulu/500/ --data resources/ --lang zul --n 100 --r with --k 50```
 
+## 8. Do the same for every language
 
-## 7. Do the same for every language
+## Alternative splits
+
+### Gather features of data sets, as well as generate heuristic/adversarial data splits
+
+```python3 code/heuristics.py --input experiments/zulu/ --lang zul --output yayyy/ --split A --generate```
+
+### Gather features of new unseen test sets
+
+```python3 code/new_test_heuristics.py --input experiments/zulu/ --output yayyy/ --lang zul```
 
 ## Yayyy: Full Results 
 
