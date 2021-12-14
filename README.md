@@ -26,13 +26,13 @@ Zulu: zulu/zul
 
 Indonesian: indonesian/ind
 
-## Create experiments folder and subfolders for each language
+## 1. Create experiments folder and subfolders for each language
 
 ```mkdir experiments```
 
 ```mkdir mayo```
 
-## Generate data (an example)
+## 2. Generate data (an example)
 
 ### with replacement, data size = 500
 
@@ -42,7 +42,7 @@ Indonesian: indonesian/ind
 
 ```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r without --k 500```
 
-## Morfessor 
+## 3. Training models: Morfessor 
 
 ### Train morfessor models 
 
@@ -58,7 +58,7 @@ Indonesian: indonesian/ind
 
 ```bash mayo_500_morf_eval.sh```
 
-## CRF
+## 4. Training models: CRF
 
 ### Generate CRF shell script
 
@@ -66,7 +66,7 @@ e.g., generating 3-CRF shell script
 
 ```python3 code/crf_order.py --input experiments/mayo/500/ --lang mayo --r with --order 3```
 
-### Seq2seq
+## 5. Training models: Seq2seq
 
 ### Generate configuration .yaml files
 
@@ -74,6 +74,19 @@ e.g., generating 3-CRF shell script
 
 ```python3 code/yaml.py --input experiments/mayo/500/ --lang mayo --r without```
 
+## 6. Testing
+
+### Testing the best CRF
+
+e.g., 4-CRFs trained from data sets sampled with replacement, for test sets of size 50
+
+```python3 code/testing_crf.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --order 4 --r with --k 50```
+
+### Testing the best Seq2seq
+
+e.g., trained from data sets sampled with replacement, for test sets of size 50
+
+```python3 code/testing_seq2seq.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --r with --k 50```
 
 ## Full Results 
 
