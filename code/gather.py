@@ -42,7 +42,7 @@ if __name__ == '__main__':
 	replacement = ['with', 'without']
 
 
-	for d in ['500', '1000']: # os.listdir(args.input):
+	for d in os.listdir(args.input):
 		for r in replacement:
 
 		####################### Morfessor ######################
