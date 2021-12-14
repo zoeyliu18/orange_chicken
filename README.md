@@ -125,3 +125,5 @@ e.g., trained from data sets sampled with replacement, for test sets of size 50
 ## Yayyy: Full Results 
 
 Get them [here](https://drive.google.com/file/d/11s_B9KsVS430VtzLzEaRABW4dpR9jWDj/view?usp=sharing)
+
+## See ```code/plot.R``` for analysis and making fun plots 
