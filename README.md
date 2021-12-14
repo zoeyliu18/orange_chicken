@@ -2,29 +2,31 @@
 
 Code and data for **Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation**, to appear in Transactions of the Association for Computational Linguistics
 
-## (alternative) Language codes for running experiments
+## (alternative) Language codes and data directories for running experiments
 
-Yorem Nokki: mayo
+Please see Section 4 in the paper for respective citations regarding the data source of these languages
 
-Nahuatl: nahuatl
+Yorem Nokki: mayo ```resources/```
 
-Wixarika: wixarika
+Nahuatl: nahuatl ```resources/```
 
-English: english/eng
+Wixarika: wixarika ```resources/```
 
-German: german/ger
+English: english/eng ```resources/NeuralMorphemeSegmentation/morphochal10data/```
 
-Persian: persian
+German: german/ger ```resources/supplement/seg/ger```
 
-Russian: russian/ru
+Persian: persian ```resources/```
 
-Turkish: turkish/tur
+Russian: russian/ru ```resources/NeuralMorphemeSegmentation/data/```
 
-Finnish: finnish/fin
+Turkish: turkish/tur ```resources/NeuralMorphemeSegmentation/morphochal10data/```
 
-Zulu: zulu/zul
+Finnish: finnish/fin ```resources/NeuralMorphemeSegmentation/morphochal10data/```
 
-Indonesian: indonesian/ind
+Zulu: zulu/zul ```resources/supplement/seg/zul```
+
+Indonesian: indonesian/ind ```resources/supplement/seg/ind```
 
 ## 1. Create experiments folder and subfolders for each language
 
