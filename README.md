@@ -28,7 +28,7 @@ Zulu: zulu/zul ```resources/supplement/seg/zul```
 
 Indonesian: indonesian/ind ```resources/supplement/seg/ind```
 
-## 1. Create experiments folder and subfolders for each language; take Yorem Nokki as an example
+## 1. Create experiments folder and subfolders for each language; e.g., Yorem Nokki
 
 ```mkdir experiments```
 
@@ -90,6 +90,8 @@ e.g., trained from data sets sampled with replacement, for test sets of size 50
 
 ```python3 code/testing_seq2seq.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --r with --k 50```
 
-## Full Results 
+## 7. Do the same for every language
+
+## Yayyy: Full Results 
 
 Get them [here](https://drive.google.com/file/d/11s_B9KsVS430VtzLzEaRABW4dpR9jWDj/view?usp=sharing)
