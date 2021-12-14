@@ -5,9 +5,18 @@ Code and data for **Data-driven Model Generalizability in Crosslinguistic Low-re
 ## Create experiments folder and subfolders for each language
 
 ```mkdir experiments```
+
 ```mkdir mayo```
 
 ## Generate data 
+
+### with replacement, data size = 500
+
+```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r with --k 500```
+
+### without replacement, data size = 500
+
+python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r without --k 500
 
 ## Results 
 
