@@ -76,6 +76,26 @@ e.g., generating 3-CRF shell script
 
 ```python3 code/yaml.py --input experiments/mayo/500/ --lang mayo --r without```
 
+### Generate pbs file (containing also the code to train Seq2seq model)
+
+```python3 code/sirius.py --input experiments/mayo/500/ --lang mayo --r with```
+
+```python3 code/sirius.py --input experiments/mayo/500/ --lang mayo --r without```
+
+## Gather training results for a given language 
+
+Again take Yorem Nokki as an example. Make sure that given a data set size (e.g, 500) and a sampling method (e.g., with replacement), there are three subfolders in the folder ```experiments/mayo/500/with```: 
+
+(1) ```morfessor``` for all ```*eval*``` files from Morfessor; 
+
+(2) ```higher_orders``` for all ```*eval*``` files from k-CRF;
+
+(3) ```seq2seq``` for all ```*eval*``` files from Seq2seq
+
+Then run:
+
+```python3 code/gather.py --input experiments/mayo/ --lang mayo --short mayo.txt --full mayo_full.txt --long mayo_details.txt```
+
 ## 6. Testing
 
 ### Testing the best CRF
@@ -89,6 +109,7 @@ e.g., 4-CRFs trained from data sets sampled with replacement, for test sets of s
 e.g., trained from data sets sampled with replacement, for test sets of size 50
 
 ```python3 code/testing_seq2seq.py --input experiments/mayo/500/ --data resources/ --lang mayo --n 100 --r with --k 50```
+
 
 ## 7. Do the same for every language
 
