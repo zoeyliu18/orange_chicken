@@ -28,7 +28,7 @@ Zulu: zulu/zul ```resources/supplement/seg/zul```
 
 Indonesian: indonesian/ind ```resources/supplement/seg/ind```
 
-## 1. Create experiments folder and subfolders for each language
+## 1. Create experiments folder and subfolders for each language; take Yorem Nokki as an example
 
 ```mkdir experiments```
 
