@@ -7,9 +7,14 @@ This repository contains code and data for evaluating model performance in cross
 The `resource` directory holds the initial data for each language invited to participate in my experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
 For the three Mexican languages, the data came from [this paper](https://aclanthology.org/N18-1005/). 
+
 (1) download the data from the public repository
-(2) for each language, combine all the data from the training, development, and test set; this applies to both the *src files and the *tgt files.. 
-(3) rename the combined data file as, e.g., Yorem Nokki: `mayo_src`, 
+
+(2) for each language, combine all the data from the training, development, and test set; this applies to both the *src files and the *tgt files.
+
+(3) rename the combined data file as, e.g., Yorem Nokki: `mayo_src`, `mayo_tgt`, Nahuatl: `nahuatl_src`, `nahuatl_tgt`
+
+For the
 
 ### Summary of (alternative) Language codes and data directories for running experiments
 
