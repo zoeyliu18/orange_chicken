@@ -6,7 +6,7 @@ This repository contains code and data for evaluating model performance in cross
 
 The `resource` directory is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
-The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
+### The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
 
 (1) download the data from the public repository
 
