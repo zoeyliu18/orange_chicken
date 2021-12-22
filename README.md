@@ -4,7 +4,7 @@ This repository contains code and data for evaluating model performance in cross
 
 ## Resources
 
-The `resource` directory holds the initial data for each language invited to participate in my experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
+The `resource` directory is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
 The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
 
@@ -62,19 +62,37 @@ Zulu: zulu/zul ```resources/supplement/seg/zul```
 
 Indonesian: indonesian/ind ```resources/supplement/seg/ind```
 
-## 1. Create experiments folder and subfolders for each language; e.g., Yorem Nokki
+## Code
+
+The `code` directory contains the code applied to conduct the experiments.
+
+## Prerequisites
+
+Install the following:
+
+(1) Python 3
+
+(2) [Morfessor](https://morfessor.readthedocs.io/en/latest/)
+
+(3) [CRFsuite](https://www.chokkan.org/software/crfsuite/)
+
+(4) [OpenNMT](https://opennmt.net/)
+
+##  Basic running of the code
+
+### 1. Create experiments folder and subfolders for each language; e.g., Zulu
 
 ```mkdir experiments```
 
-```mkdir mayo```
+```mkdir zulu```
 
-## 2. Generate data (an example)
+### 2. Generate data (an example)
 
-### with replacement, data size = 500
+#### with replacement, data size = 500
 
 ```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r with --k 500```
 
-### without replacement, data size = 500
+#### without replacement, data size = 500
 
 ```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r without --k 500```
 
