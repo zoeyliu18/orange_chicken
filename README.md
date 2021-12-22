@@ -6,15 +6,37 @@ This repository contains code and data for evaluating model performance in cross
 
 The `resource` directory holds the initial data for each language invited to participate in my experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
-For the three Mexican languages, the data came from [this paper](https://aclanthology.org/N18-1005/). 
+The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
 
 (1) download the data from the public repository
 
 (2) for each language, combine all the data from the training, development, and test set; this applies to both the *src files and the *tgt files.
 
-(3) rename the combined data file as, e.g., Yorem Nokki: `mayo_src`, `mayo_tgt`, Nahuatl: `nahuatl_src`, `nahuatl_tgt`
+(3) rename the combined data file as, e.g., Yorem Nokki: `mayo_src`, `mayo_tgt`, Nahuatl: `nahuatl_src`, `nahuatl_tgt`.
 
-For the
+(4) put the data files within `resource`
+
+The data for Persian came from [here](https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-3011).
+
+(1) download the data from the public repository
+
+(2) combine the training, development, and test set to one data file
+
+(3) rename the combined data file as `persian`
+
+(4) put the single data file within `resource`
+
+The data for German, Zulu and Indonesian came from [this paper](https://aclanthology.org/K15-1017/).
+
+(1) download the data from the public repository
+
+(2) put the downloaded `supplement` folder within `resource`
+
+The data for English, Russian, Turkish and Finnish came from [this repo](https://github.com/AlexeySorokin/NeuralMorphemeSegmentation).
+
+(1) download the git repo
+
+(2) put the downloaded `NeuralMorphemeSegmentation` folder within `resource`
 
 ### Summary of (alternative) Language codes and data directories for running experiments
 
