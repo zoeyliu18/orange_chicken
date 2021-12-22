@@ -4,9 +4,9 @@ This repository contains code and data for evaluating model performance in cross
 
 ## Resources
 
-The `resource` directory holds the initial data for each language invited to participate in my experiments.
+The `resource` directory holds the initial data for each language invited to participate in my experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
-## (alternative) Language codes and data directories for running experiments
+### (alternative) Language codes and data directories for running experiments
 
 Please see Section 4 in the paper for respective citations regarding the data source of these languages
 
