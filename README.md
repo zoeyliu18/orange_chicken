@@ -1,4 +1,4 @@
-# orange_chicken
+# orange_chicken: code and data for **Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation**
 
 This repository contains code and data for **Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation**, to appear in Transactions of the Association for Computational Linguistics
 
