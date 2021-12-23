@@ -164,7 +164,7 @@ e.g., trained from data sets sampled with replacement, for test sets of size 50
 
 ### Do the same for every language
 
-### Alternative splits
+### Generating alternative splits
 
 #### Gather features of data sets, as well as generate heuristic/adversarial data splits
 
