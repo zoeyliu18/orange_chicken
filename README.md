@@ -20,7 +20,7 @@ The `code` directory contains the code applied to conduct the experiments.
 
 ## Collect initial data
 
-Create a `resource folder`. This folder is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
+Create a `resource ` folder. This folder is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
 ### The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
 
