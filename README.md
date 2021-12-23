@@ -90,11 +90,11 @@ The `code` directory contains the code applied to conduct the experiments.
 
 #### with replacement, data size = 500
 
-```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang mayo --r with --k 500```
+```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang zul --r with --k 500```
 
 #### without replacement, data size = 500
 
-```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang mayo --r without --k 500```
+```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang zul --r without --k 500```
 
 ### Training models: Morfessor 
 
