@@ -2,9 +2,25 @@
 
 This repository contains code and data for evaluating model performance in crosslinguistic low-resource settings, using morphological segmentation as the test case. For more information, we refer to the paper Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation, to appear in Transactions of the Association for Computational Linguistics.
 
-## Resources
+## Prerequisites
 
-The `resource` directory is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
+### Install the following:
+
+(1) Python 3
+
+(2) [Morfessor](https://morfessor.readthedocs.io/en/latest/)
+
+(3) [CRFsuite](https://www.chokkan.org/software/crfsuite/)
+
+(4) [OpenNMT](https://opennmt.net/)
+
+## Code
+
+The `code` directory contains the code applied to conduct the experiments.
+
+## Collect initial data
+
+Create a `resource folder`. This folder is supposed to hold the initial data for each language invited to participate in the experiments. The experiments were performed at different stages, therefore the initial data of different languages have different subdirectories within `resource` (please excuse this).
 
 ### The data for three Mexican languages came from [this paper](https://aclanthology.org/N18-1005/). 
 
@@ -61,22 +77,6 @@ Finnish: finnish/fin ```resources/NeuralMorphemeSegmentation/morphochal10data/``
 Zulu: zulu/zul ```resources/supplement/seg/zul```
 
 Indonesian: indonesian/ind ```resources/supplement/seg/ind```
-
-## Code
-
-The `code` directory contains the code applied to conduct the experiments.
-
-## Prerequisites
-
-### Install the following:
-
-(1) Python 3
-
-(2) [Morfessor](https://morfessor.readthedocs.io/en/latest/)
-
-(3) [CRFsuite](https://www.chokkan.org/software/crfsuite/)
-
-(4) [OpenNMT](https://opennmt.net/)
 
 ##  Basic running of the code
 
