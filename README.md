@@ -16,7 +16,7 @@ The `resource` directory is supposed to hold the initial data for each language 
 
 (4) put the data files within `resource`
 
-The data for Persian came from [here](https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-3011).
+### The data for Persian came from [here](https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-3011).
 
 (1) download the data from the public repository
 
@@ -26,13 +26,13 @@ The data for Persian came from [here](https://lindat.mff.cuni.cz/repository/xmlu
 
 (4) put the single data file within `resource`
 
-The data for German, Zulu and Indonesian came from [this paper](https://aclanthology.org/K15-1017/).
+### The data for German, Zulu and Indonesian came from [this paper](https://aclanthology.org/K15-1017/).
 
 (1) download the data from the public repository
 
 (2) put the downloaded `supplement` folder within `resource`
 
-The data for English, Russian, Turkish and Finnish came from [this repo](https://github.com/AlexeySorokin/NeuralMorphemeSegmentation).
+### The data for English, Russian, Turkish and Finnish came from [this repo](https://github.com/AlexeySorokin/NeuralMorphemeSegmentation).
 
 (1) download the git repo
 
@@ -68,7 +68,7 @@ The `code` directory contains the code applied to conduct the experiments.
 
 ## Prerequisites
 
-Install the following:
+### Install the following:
 
 (1) Python 3
 
@@ -80,63 +80,63 @@ Install the following:
 
 ##  Basic running of the code
 
-### 1. Create experiments folder and subfolders for each language; e.g., Zulu
+### Create experiments folder and subfolders for each language; e.g., Zulu
 
 ```mkdir experiments```
 
 ```mkdir zulu```
 
-### 2. Generate data (an example)
+### Generate data (an example)
 
 #### with replacement, data size = 500
 
-```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r with --k 500```
+```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang mayo --r with --k 500```
 
 #### without replacement, data size = 500
 
-```python3 code/segmentation_data.py --input resources/ --output experiments/mayo/ --lang mayo --r without --k 500```
+```python3 code/segmentation_data.py --input resources/supplement/seg/zul/ --output experiments/zulu/ --lang mayo --r without --k 500```
 
-## 3. Training models: Morfessor 
+### Training models: Morfessor 
 
-### Train morfessor models 
+#### Train morfessor models 
 
-```python3 code/morfessor/morfessor.py --input experiments/mayo/500/with/ --lang mayo```
+```python3 code/morfessor/morfessor.py --input experiments/zulu/500/with/ --lang zul```
 
 ```python3 code/morfessor/morfessor.py --input experiments/zulu/500/without/ --lang zul```
 
-### Generate evaluation scrips for morfessor model results
+#### Generate evaluation scrips for morfessor model results
 
-```python3 code/morf_shell.py --input experiments/mayo/500/ --lang mayo```
+```python3 code/morf_shell.py --input experiments/zulu/500/ --lang zul```
 
-### Evaluate morfessor model results
+#### Evaluate morfessor model results
 
-```bash mayo_500_morf_eval.sh```
+```bash zulu_500_morf_eval.sh```
 
-## 4. Training models: CRF
+### Training models: CRF
 
-### Generate CRF shell script
+#### Generate CRF shell script
 
 e.g., generating 3-CRF shell script
 
-```python3 code/crf_order.py --input experiments/mayo/500/ --lang mayo --r with --order 3```
+```python3 code/crf_order.py --input experiments/zulu/500/ --lang zul --r with --order 3```
 
-## 5. Training models: Seq2seq
+### Training models: Seq2seq
 
-### Generate configuration .yaml files
+#### Generate configuration .yaml files
 
-```python3 code/yaml.py --input experiments/mayo/500/ --lang mayo --r with```
+```python3 code/yaml.py --input experiments/zulu/500/ --lang zul --r with```
 
-```python3 code/yaml.py --input experiments/mayo/500/ --lang mayo --r without```
+```python3 code/yaml.py --input experiments/zulu/500/ --lang zul --r without```
 
-### Generate pbs file (containing also the code to train Seq2seq model)
+#### Generate pbs file (containing also the code to train Seq2seq model)
 
-```python3 code/sirius.py --input experiments/mayo/500/ --lang mayo --r with```
+```python3 code/sirius.py --input experiments/zulu/500/ --lang zul --r with```
 
-```python3 code/sirius.py --input experiments/mayo/500/ --lang mayo --r without```
+```python3 code/sirius.py --input experiments/zulu/500/ --lang zul --r without```
 
-## 6. Gather training results for a given language 
+### Gather training results for a given language 
 
-Again take Yorem Nokki as an example. Make sure that given a data set size (e.g, 500) and a sampling method (e.g., with replacement), there are three subfolders in the folder ```experiments/mayo/500/with```: 
+Again take Zulu as an example. Make sure that given a data set size (e.g, 500) and a sampling method (e.g., with replacement), there are three subfolders in the folder ```experiments/zulu/500/with```: 
 
 (1) ```morfessor``` for all ```*eval*``` files from Morfessor; 
 
@@ -146,35 +146,35 @@ Again take Yorem Nokki as an example. Make sure that given a data set size (e.g,
 
 Then run:
 
-```python3 code/gather.py --input experiments/mayo/ --lang mayo --short mayo.txt --full mayo_full.txt --long mayo_details.txt```
+```python3 code/gather.py --input experiments/zulu/ --lang zul --short zulu.txt --full zulu_full.txt --long zulu_details.txt```
 
-## 7. Testing
+### Testing
 
-### Testing the best CRF
+#### Testing the best CRF
 
 e.g., 4-CRFs trained from data sets sampled with replacement, for test sets of size 50
 
-```python3 code/testing_crf.py --input experiments/zulu/500/ --data resources/ --lang zul --n 100 --order 4 --r with --k 50```
+```python3 code/testing_crf.py --input experiments/zulu/500/ --data resources/supplement/seg/zul/ --lang zul --n 100 --order 4 --r with --k 50```
 
-### Testing the best Seq2seq
+#### Testing the best Seq2seq
 
 e.g., trained from data sets sampled with replacement, for test sets of size 50
 
-```python3 code/testing_seq2seq.py --input experiments/zulu/500/ --data resources/ --lang zul --n 100 --r with --k 50```
+```python3 code/testing_seq2seq.py --input experiments/zulu/500/ --data resources/supplement/seg/zul/ --lang zul --n 100 --r with --k 50```
 
-## 8. Do the same for every language
+### Do the same for every language
 
-## Alternative splits
+### Alternative splits
 
-### Gather features of data sets, as well as generate heuristic/adversarial data splits
+#### Gather features of data sets, as well as generate heuristic/adversarial data splits
 
 ```python3 code/heuristics.py --input experiments/zulu/ --lang zul --output yayyy/ --split A --generate```
 
-### Gather features of new unseen test sets
+#### Gather features of new unseen test sets
 
 ```python3 code/new_test_heuristics.py --input experiments/zulu/ --output yayyy/ --lang zul```
 
-## Yayyy: Full Results 
+### Yayyy: Full Results 
 
 Get them [here](https://drive.google.com/file/d/11s_B9KsVS430VtzLzEaRABW4dpR9jWDj/view?usp=sharing)
 
