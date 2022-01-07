@@ -2,6 +2,17 @@
 
 This repository contains code and data for evaluating model performance in crosslinguistic low-resource settings, using morphological segmentation as the test case. For more information, we refer to the paper Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation, to appear in Transactions of the Association for Computational Linguistics.
 
+```
+@misc{liu2022datadriven,
+      title={Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation}, 
+      author={Zoey Liu and Emily Prud'hommeaux},
+      year={2022},
+      eprint={2201.01845},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
 ## Prerequisites
 
 ### Install the following:
