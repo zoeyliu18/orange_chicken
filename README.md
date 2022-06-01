@@ -1,18 +1,23 @@
 # Orange Chicken: Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation
 
-This repository contains code and data for evaluating model performance in crosslinguistic low-resource settings, using morphological segmentation as the test case. For more information, we refer to the paper Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation, to appear in Transactions of the Association for Computational Linguistics.
-
-## [Arxiv version here](https://arxiv.org/abs/2201.01845)
+This repository contains code and data for evaluating model performance in crosslinguistic low-resource settings, using morphological segmentation as the test case. For more information, we refer to the paper [Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00467/110437/Data-driven-Model-Generalizability-in).
 
 ```
-@misc{liu2022datadriven,
-      title={Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation}, 
-      author={Zoey Liu and Emily Prud'hommeaux},
-      year={2022},
-      eprint={2201.01845},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{10.1162/tacl_a_00467,
+    author = {Liu, Zoey and Prud’hommeaux, Emily},
+    title = "{Data-driven Model Generalizability in Crosslinguistic Low-resource Morphological Segmentation}",
+    journal = {Transactions of the Association for Computational Linguistics},
+    volume = {10},
+    pages = {393-413},
+    year = {2022},
+    month = {04},
+    abstract = "{Common designs of model evaluation typically focus on monolingual settings, where different models are compared according to their performance on a single data set that is assumed to be representative of all possible data for the task at hand. While this may be reasonable for a large data set, this assumption is difficult to maintain in low-resource scenarios, where artifacts of the data collection can yield data sets that are outliers, potentially making conclusions about model performance coincidental. To address these concerns, we investigate model generalizability in crosslinguistic low-resource scenarios. Using morphological segmentation as the test case, we compare three broad classes of models with different parameterizations, taking data from 11 languages across 6 language families. In each experimental setting, we evaluate all models on a first data set, then examine their performance consistency when introducing new randomly sampled data sets with the same size and when applying the trained models to unseen test sets of varying sizes. The results demonstrate that the extent of model generalization depends on the characteristics of the data set, and does not necessarily rely heavily on the data set size. Among the characteristics that we studied, the ratio of morpheme overlap and that of the average number of morphemes per word between the training and test sets are the two most prominent factors. Our findings suggest that future work should adopt random sampling to construct data sets with different sizes in order to make more responsible claims about model evaluation.}",
+    issn = {2307-387X},
+    doi = {10.1162/tacl_a_00467},
+    url = {https://doi.org/10.1162/tacl\_a\_00467},
+    eprint = {https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl\_a\_00467/2006979/tacl\_a\_00467.pdf},
 }
+
 ```
 
 ## Prerequisites
